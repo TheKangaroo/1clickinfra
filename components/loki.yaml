@@ -1,0 +1,16 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: loki
+  namespace: infrastructure
+spec:
+  releaseName: loki
+  chart:
+    repository: https://grafana.github.io/loki/charts
+    name: loki-stack
+    version: 0.41.2
+  values:
+    grafana:
+      enabled: false
+    prometheus:
+      enabled: false

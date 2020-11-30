@@ -1,0 +1,1 @@
+{"version":"0.7.1","vendor":"","loki":{"enabled":true},"nginx":{"enabled":true,"host":""},"certManager":{"enabled":true,"email":""},"oauth2Proxy":{"enabled":false,"org":"","user":"","clientID":"","clientSecret":"","cookieSecret":""},"prometheus":{"enabled":true},"linkerd":{"enabled":false,"crtExpiry":"","certs":""},"sealedSecrets":{"enabled":true,"sealingKey":""}}

@@ -1,0 +1,20 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: prometheus
+  namespace: infrastructure
+spec:
+  releaseName: prometheus
+  chart:
+    repository: https://prometheus-community.github.io/helm-charts
+    name: prometheus
+    version: 11.16.3
+  values:
+    server:
+      global:
+        scrape_interval: 15s
+
+    # adds additional scrape configs to prometheus.yml
+    # must be a string so you have to add a | after extraScrapeConfigs:
+    # example adds prometheus-blackbox-exporter scrape config
+    extraScrapeConfigs: |-
